@@ -13,9 +13,15 @@ let tickNum = 0;
 let counterNum = 1
 
 //set drum-count beats
-let snareBeat = document.getElementById('snare-count')
-let hihatBeat = document.getElementById('hihat-count')
-let kickBeat = document.getElementById('kick-count')
+let snareBeat = document.getElementById('snare-count');
+let hihatBeat = document.getElementById('hihat-count');
+let kickBeat = document.getElementById('kick-count');
+
+//check the check box for each instrument
+let playMet = document.getElementById('metronome-checkbox');
+let playSn = document.getElementById('snaredrum-checkbox');
+let playHi = document.getElementById('hihat-checkbox');
+let playKickdrum = document.getElementById('kickdrum-checkbox');
 
 
 // This function is called every 600ms
@@ -35,7 +41,6 @@ function update() {
 }
 
 function playMetronome() {
-    let playMet = document.getElementById('metronome-checkbox')
     if (playMet.checked) {
         if (tickNum < 4) {
             tick.load(); //had issues with sound timing that .load fixed
@@ -50,17 +55,15 @@ function playMetronome() {
 }
 
 function playSnareDrum() {
-    let playSn = document.getElementById('snaredrum-checkbox')
     if (playSn.checked) {
         if (Number(snareBeat.value) === tickNum) {
-            snare.load()
+            snare.load();
             snare.play();
         }
     }
 }
 
 function playHiHat() {
-    let playHi = document.getElementById('hihat-checkbox')
     if (playHi.checked) {
         if (Number(hihatBeat.value) === tickNum) {
             hihat.load();
@@ -70,8 +73,7 @@ function playHiHat() {
 }
 
 function playKick() {
-    let playKick = document.getElementById('kickdrum-checkbox')
-    if (playKick.checked) {
+    if (playKickdrum.checked) {
         if (Number(kickBeat.value) === tickNum) {
             kick.load();
             kick.play();
