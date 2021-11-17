@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
+    color: white;
 }
+
+html { 
+    background: url(https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZHJ1bXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80) no-repeat center center fixed; 
+    background-size: cover;
+    font-size:x-large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 
 body {
     height: 100vh;
@@ -9,7 +17,6 @@ body {
     justify-content: center;
     margin: none;
     flex-direction: column;
-    background-color: #81b29a;
 }
 
 .tip {
@@ -27,29 +34,29 @@ body {
 }
 
 .background-left {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #5fcde0;
     border-left: 100px solid transparent;
 }
 
 .background-center {
     flex: 1;
-    background-color: #f2cc8f;
+    background-color: #687bb8;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .background-right {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #5fcde0;
     border-right: 100px solid transparent;
 }
 
 .core {
     flex: 1;
     width: 30%;
-    background-color: #f4f1de;
+    background-color: #b9dfe0;
     margin: 24px 0;
-    border: 6px dashed #e07a5f;
+    border: 6px dashed #5fcde0;
 }
 
 @keyframes tick {
@@ -61,7 +68,7 @@ body {
 .arm {
     height: 300px;
     width: 20px;
-    background-color: #3d405b;
+    background-color: #0d155e;
     position: absolute;
     bottom: 5px;
     border-bottom-left-radius: 10px;
